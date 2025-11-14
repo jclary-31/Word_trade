@@ -3,5 +3,5 @@ An exploration of word trade through power BI ;  and neural network (in python) 
 
 example with power BI
 <p align="center">
- <img width="800" src=Dashboard 1.png>
+ <img width="800" src=Dashboard1.png>
  </p>
