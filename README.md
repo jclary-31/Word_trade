@@ -43,7 +43,7 @@ NLD 7.64 \
 IND 7.39 \
 NOR 7.14 \
 ITA 6.97 \
-BEL 6.96 \
+BEL 6.96 
 
 Some comments here, 1) most important country for France is... China, 2) France and USA are not directly connected but USA is the 2nd most important country to France exchanges; and 3) I don't know how to interpret France in this rank. Maybe I should juste remove it and renomralize but it feels odd. 
 
