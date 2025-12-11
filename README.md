@@ -1,7 +1,7 @@
 # Word_trade
-An exploration of word trade through power BI ;  and neural network (in python) to better understand relationships[not finished] \
-The code in main_nb can be adapted for any country, with 3 letter ISO format\
-The SITC Classification is : \
+An exploration of word trade through power BI ;  and neural network (in python) to better understand relationships[not finished] 
+I downloaded yearly csv file from https://comtradeplus.un.org/. As the download process was buggy, I did not keep all types of goods/commodities.
+The commodities I kept are referenced by the SITC Classification, where : \
 0 Food and live animals \
 2 Crude inedible materials , no fuels \
 3 mineral and fuels \
@@ -10,8 +10,15 @@ The SITC Classification is : \
 8 miscellaneous manufactured aricles (not in 6) \
 TOTAL all other combined
 
+I think there is a way to directly get information from an api. I quickly tested it and I am really not sure that the free version works as I want, so I use here I use a csv downloaded month ago, but to heavy to be share on github (because of limitations)
 
-# visualizatopm with power BI
+I done a first vizualisation with power BI, which is good to show general graphics but not for coding stuff. So I  explored data through a  python notebook, in which I noted that data are not symmetrical. It mean data exchange country 1->2 is not the same in amplitude as 2->1. I think one of the main reason is because of most of goods travel by maritim ways. FOr example, a cargo leaving Indonesia in october 2020, will probably arrive in England in march 2021, meaning that commodity leave in 2020 and arrived next year.
+
+I wanted to harmonize the data, before analysis, and use the process to complet some missing information but time required to do this is way too long. Without parallel computing it would take around 90 mn, and even with parallel computing it would take 20mn+. The test is in the notebook.
+
+I decided to do a dynamic dashboard too, which can be run executed using the command 'py app.py'.
+
+# visualization with power BI
 <p align="center">
  <img width="400" src=Dashboard1.png>
  </p>
@@ -46,4 +53,13 @@ ITA 6.97 \
 BEL 6.96 
 
 Some comments here, 1) most important country for France is... China, 2) France and USA are not directly connected but USA is the 2nd most important country to France exchanges; and 3) I don't know how to interpret France in this rank. Maybe I should juste remove it and renomralize but it feels odd. 
+
+# local application
+execute command 'py app.py' in a terminal (at the right place, and with the downloaded csv file) \
+this will create a local html page on you web browser at http://127.0.0.1:8050/
+
+Within this local web page you can different commodities referenced by their SITC classification, and you can choose one metric between Export, Import, Balance, and Volume.  From the map you can then choose a country A (just click on it) and you will get the top 6 countries exchanging the most with country A.,  then you have a neural network, as as presented in previous section, and the ranking of the countries in this network.
+
+an example of visualization is given by [dynamic dashboard example](Dash_example.pdf)
+
 
