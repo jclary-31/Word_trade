@@ -1,5 +1,4 @@
 # Word_trade
-An exploration of word trade through power BI ;  and neural network (in python) to better understand relationships[not finished] 
 I downloaded yearly csv file from https://comtradeplus.un.org/. As the download process was buggy, I did not keep all types of goods/commodities.
 The commodities I kept are referenced by the SITC Classification, where : \
 0 Food and live animals \
